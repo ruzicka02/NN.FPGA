@@ -1,0 +1,12 @@
+[submodule "VerilogNN"]
+	path = VerilogNN
+	url = git@github.com:ruzicka02/VerilogNN.git
+[submodule "FPU-IEEE-754"]
+	path = FPU-IEEE-754
+	url = git@github.com:ruzicka02/FPU-IEEE-754.git
+[submodule "devmem2"]
+	path = devmem2
+	url = git@github.com:ruzicka02/devmem2.git
+[submodule "mem_master"]
+	path = mem_master
+	url = git@github.com:ruzicka02/mem_master.git
