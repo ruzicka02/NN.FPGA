@@ -10,13 +10,13 @@ rsync -av --info=progress2 \
       $ADDRESS:$SUBPATH/Generated/ \
       && echo "Done!"
 
-echo "Uploading the NN controller  (dist_packages/kria_nn_controller)..."
+echo "Uploading the NN controller (dist_packages/mem_master)..."
 # upload needs sudo on remote
 # https://askubuntu.com/questions/719439/using-rsync-with-sudo-on-the-destination-machine
 rsync -av --info=progress2 \
       --rsync-path="sudo rsync" --exclude '.git' --exclude '__pycache__' \
-      ~/School/Praktikum/kria_nn_controller/ \
-      $ADDRESS:/lib/python3/dist-packages/kria_nn_controller/ \
+      ~/School/Praktikum/mem_master/ \
+      $ADDRESS:/lib/python3/dist-packages/mem_master/ \
       && echo "Done!"
 
 echo "Uploading devmem2 source files..."
