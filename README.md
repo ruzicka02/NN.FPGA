@@ -17,6 +17,12 @@ Some other directories which are not submodules are included:
 - `scripts`... Shell scripts to perform multiple necessary tasks semi-automatically. Mostly copying files over SSH using rsync.
 - **TODO**
 
+When cloning the repositories, these submodules will not download automatically. To load all of the submodules correctly, run following command:
+
+```
+git submodule update --init --recursive
+```
+
 # Technical information
 
 How to run this project, ...
