@@ -2,6 +2,12 @@
 
 Series of projects implementing different Neural network architectures on FPGA using Verilog. Intended use is for the Kria KV260 board.
 
+Authors:
+- [Šimon Růžička](https://github.com/ruzicka02)
+- [Philipp Wondra](https://github.com/Philippwon)
+
+This project was created at [Technical University of Munich](https://www.tum.de) as a part of the Creation of Deep Learning Methods Practical Course. The project was supervised by Dr. Vladimir Golkov.
+
 ## Submodule description
 
 Multiple different submodules (Git repositories) are contained within this main repo. These are:
@@ -15,9 +21,9 @@ within the physical address space. This is a fork of the original repository, do
 Some other directories which are not submodules are included:
 
 - `scripts`... Shell scripts to perform multiple necessary tasks semi-automatically. Mostly copying files over SSH using rsync.
-- **TODO**
+- `docs`... Additional project documentation. Contains a Markdown document with detailed description of this project. Converted from a Word document shared with our supervisor and other students at TUM. Final presentation slides, `slides.pptx` and `slides.pdf` **TODO** are also included.
 
-When cloning the repositories, these submodules will not download automatically. To load all of the submodules correctly, run following command:
+When cloning this repository, these submodules will not download automatically. To load all of the submodules correctly, run following command:
 
 ```
 git submodule update --init --recursive
@@ -25,7 +31,26 @@ git submodule update --init --recursive
 
 # Technical information
 
-How to run this project, ...
+This guide should provide you with enough information to run the project.
+
+## Simulate Verilog modules
+
+The easiest way to simulate a Verilog module in our opinion is [Icarus Verilog](https://github.com/steveicarus/iverilog) simulator. For more details about its installation, see the linked repository. Keep in mind that this process still differs significantly from the HW implementation, for more details see `docs`.
+
+Most common approach in Verilog simulation is to create a wrapper/testbench around the source file itself. This can be used to assign different values over time, use debugging printing methods etc., utilizing the simulation-only Verilog features. Such modules are included in the `VerilogNN/sim` directory. In order to "compile" a Verilog testbench file into the `vvp` format, use:
+
+```
+iverilog -o ModuleName.vvp sim/ModuleName.v -s ModuleName -I src/
+```
+
+Then, run simulation with:
+
+```
+vvp ModuleName.vvp -lxt2
+```
+
+By running the simulation, a waveform file is created in the `vcd/` directory. The `-lxt2` simulation switch results in significant compression of this file. This waveform can be displayed in multiple visualizers, such as GTKWave.
+
 
 ## Run bitsream on target
 
