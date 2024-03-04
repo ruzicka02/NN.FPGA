@@ -22,7 +22,7 @@ Some other directories which are not submodules are included:
 
 - `VivadoProject.tar.gz`... gzipped directory of the source files from Vivado project. Following files should be sufficient to replicate all the project files, as suggested on [the closest thing to a Vivado documentation](https://electronics.stackexchange.com/a/500371). The complete project was not included due to limited space (circa 1.5 GB) and the overwhelming use of absolute addresses.
 - `scripts`... Shell scripts to perform multiple necessary tasks semi-automatically. Mostly copying files over SSH using rsync.
-- `docs`... Additional project documentation. Contains a Markdown document with detailed description of this project. Converted from a Word document shared with our supervisor and other students at TUM. Final presentation slides, `slides.pptx` and `slides.pdf` **TODO** are also included.
+- `docs`... Additional project documentation. Contains a Markdown document with detailed description of this project. Converted from a Word document shared with our supervisor and other students at TUM. Final presentation slides, `slides.pptx` and `slides.pdf` are also included.
 
 When cloning this repository, these submodules will not download automatically. To load all of the submodules correctly, run following command:
 
