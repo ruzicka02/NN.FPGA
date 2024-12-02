@@ -1,6 +1,6 @@
 [submodule "VerilogNN"]
 	path = VerilogNN
-	url = git@github.com:ruzicka02/VerilogNN.git
+	url = git@github.com:thomas-woehrle/VerilogNN.git
 [submodule "FPU-IEEE-754"]
 	path = FPU-IEEE-754
 	url = git@github.com:ruzicka02/FPU-IEEE-754.git
